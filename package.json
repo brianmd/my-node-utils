@@ -1,7 +1,7 @@
 {
   "name": "my-node-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "Code I seem to be writing on multiple projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/brianmd/my-node-utils.git"
   },
-  "author": "",
+  "author": "brian@murphydye.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/brianmd/my-node-utils/issues"
