@@ -4,9 +4,15 @@ const debug = require('debug');
 
 const my = {
 
+  isBrowser: (typeof window==='object'),
+  glob: this.isBrowser ? window : global,
+
   info: debug('info'),
   log: debug('log'),
   error: debug('error'),
+
+  R: require('ramda'),
+  curry: require('ramda').curry,
 
   dbParams: {
     connectionLimit: process.env.DBCONNLIMIT || 50,
