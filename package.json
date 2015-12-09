@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/brianmd/my-node-utils/issues"
   },
-  "homepage": "https://github.com/brianmd/my-node-utils#readme"
+  "homepage": "https://github.com/brianmd/my-node-utils#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "ramda": "^0.18.0"
+  }
 }
