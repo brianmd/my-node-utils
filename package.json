@@ -4,7 +4,8 @@
   "description": "Code I seem to be writing on multiple projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "DEBUG=* node --harmony_destructuring --harmony_default_parameters index.js",
+    "test": "./node_modules/.bin/testem"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,10 @@
   "dependencies": {
     "debug": "^2.2.0",
     "ramda": "^0.18.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.3.4"
   }
 }

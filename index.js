@@ -4,9 +4,6 @@ const debug = require('debug');
 
 const my = {
 
-  isBrowser: (typeof window==='object'),
-  glob: this.isBrowser ? window : global,
-
   info: debug('info'),
   log: debug('log'),
   error: debug('error'),
@@ -21,6 +18,24 @@ const my = {
     password: process.env.DBPASSWORD,
     database: process.env.DBNAME
   },
+
+  isFunction: (obj) => {
+    return typeof obj === 'function';
+  },
+
+  propertyNames: (obj) => {
+    return Object
+      .getOwnPropertyNames(obj);
+  },
+
+  functionNames: (obj) => {
+    return Object
+      .getOwnPropertyNames(obj)
+      .filter(fn => { return typeof obj[fn]==='function' });
+  },
+
+  isBrowser: (typeof window==='object'),
+  glob: this.isBrowser ? window : global,
 
 }
 

@@ -1,0 +1,4 @@
+export BASE_URL=http://localhost:4932/punchout/
+export COUPA_IDENTITY=myidentity;
+export COUPA_SECRET=mysecret
+
