@@ -21,4 +21,15 @@ describe('my', ()=>{
       expect(fns.length).to.be.greaterThan(2);
     })
   })
+
+  describe('logging', ()=>{
+    it('returns last argument', ()=>{
+      expect(typeof my.identity).to.equal('function')
+      expect(my.identity('.')).to.equal('.')
+    })
+
+    it('returns last argument', ()=>{
+      expect(my.logit('.', '_')).to.equal('_')
+    })
+  })
 })

@@ -4,7 +4,8 @@
     "node_modules/chai/chai.js",
     "app/classes/*",
     "test/setup.js",
-    "test/*.test.js"
+    "test/*.test.js",
+    "index.js"
   ],
   "launchers": {
     "node": {

@@ -4,7 +4,14 @@ const debug = require('debug');
 
 const my = {
 
-  logit: (obj) => { console.error(obj); return obj },
+  last: (arr) => { return arr[arr.length-1] },
+  identity: (obj) => { return obj },
+  logit: function() {
+    var args = new Array(arguments.length);
+    for(var i = 0; i < args.length; ++i) { args[i] = arguments[i]; }
+    console.error(JSON.stringify(args));
+    return args[args.length-1];
+  },
   info: debug('info'),
   log: debug('log'),
   error: debug('error'),
