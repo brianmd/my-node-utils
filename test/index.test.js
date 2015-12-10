@@ -26,6 +26,10 @@ describe('my', ()=>{
       expect(my.isPromise(3)).to.be.false;
       expect(my.isPromise({})).to.be.false;
     })
+
+    it('Can extract a resolved value', ()=>{
+      return expect(my.promiseValue(Promise.resolve(777))).to.eventually.equal(777)
+    })
   })
 
   describe('logging', ()=>{

@@ -36,6 +36,10 @@ const my = {
     return (typeof obj.then === 'function');
   },
 
+  promiseValue: (promise) => {
+    return promise.then(function (val){ return val })
+  },
+
   propertyNames: (obj) => {
     return Object
       .getOwnPropertyNames(obj);
