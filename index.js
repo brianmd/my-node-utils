@@ -31,6 +31,11 @@ const my = {
     return typeof obj === 'function';
   },
 
+  isPromise: (obj) => {
+    if (typeof obj !== 'object') return false;
+    return (typeof obj.then === 'function');
+  },
+
   propertyNames: (obj) => {
     return Object
       .getOwnPropertyNames(obj);

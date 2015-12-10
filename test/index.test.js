@@ -20,6 +20,12 @@ describe('my', ()=>{
       var fns = my.functionNames(my);
       expect(fns.length).to.be.greaterThan(2);
     })
+
+    it('Promise.isPromise succeeds', ()=>{
+      expect(my.isPromise(new Promise(function(){}))).to.be.true;
+      expect(my.isPromise(3)).to.be.false;
+      expect(my.isPromise({})).to.be.false;
+    })
   })
 
   describe('logging', ()=>{
