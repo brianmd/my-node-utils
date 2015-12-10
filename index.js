@@ -4,6 +4,7 @@ const debug = require('debug');
 
 const my = {
 
+  logit: (obj) => { console.error(obj); return obj },
   info: debug('info'),
   log: debug('log'),
   error: debug('error'),
